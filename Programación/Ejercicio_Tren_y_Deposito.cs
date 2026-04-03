@@ -6,16 +6,15 @@ using System;
 
     namespace Trenes
 {
-    // 1. CLASE LOCOMOTORA
+    
     public class _Locomotora
     {
         public const int _LcPeso = 1000;
         public const int _LcVelMax = 80;
         public const int _LcPesoMax = 11000;
         public const int _Efilocomotora = _LcPeso * 5;
-    } // ¡Llave cerrada!
-
-    // 2. CLASE VAGON PASAJE
+    } 
+    
     public class _VagonPasaje : _Vagon
     {
         public double _AnchoVaPa { get; set; }
@@ -43,7 +42,7 @@ using System;
             int Cantidad_Pasajero = Calcular_Pasajero();
             return Cantidad_Pasajero * 80;
         }
-    } // ¡Llave cerrada!
+    } 
 
     // 3. CLASE VAGON CARGA
     public class _VagonCarga : _Vagon
@@ -111,7 +110,6 @@ public class _Deposito
 {
     public List<_Formacion> Formaciones { get; set; } = new List<_Formacion>();
 
-    // EL PUNTO 8 DEL ENUNCIADO:
     public bool NecesitaConductorExperimentado()
     {
         // Revisamos tren por tren en el depósito
@@ -153,11 +151,6 @@ class App
         formacion1.Vagones.Add(VagonPasaje1);
         formacion1.Vagones.Add(vagonCarga1);
         miDeposito.Formaciones.Add(formacion1);
-
-
-        // 7 vaya a saber dios foreach de lista 
-       
-        // 9 facilito agregar locomotoras
         
         Console.WriteLine("1.El total de pasajeros que lleva es:"+ VagonPasaje1.Calcular_Pasajero());
         if(pesovagon<2500)
