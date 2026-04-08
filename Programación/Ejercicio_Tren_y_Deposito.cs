@@ -69,15 +69,13 @@ using System;
     public List<_Vagon> Vagones { get; set; } = new List<_Vagon>();
     public List<_Locomotora> Locomotoras { get; set; } = new List<_Locomotora>();
 
-    // Primero, un método de ayuda para calcular el peso total de TODO el tren
     public int Calcular_PesoTotal()
     {
         int pesoTotal = 0;
 
-        // Sumamos el peso de todas las locomotoras (asumiendo que tienen un _LcPesoMax o similar)
         foreach (var loco in Locomotoras)
         {
-            pesoTotal += _Locomotora._LcPeso; // Asegurate de usar la variable correcta de tu clase
+            pesoTotal += _Locomotora._LcPeso; 
         }
 
         // Sumamos el peso de todos los vagones
@@ -89,7 +87,6 @@ using System;
         return pesoTotal;
     }
 
-    // AHORA SÍ: Validamos si la formación es compleja (Más de 20 unidades O más de 10.000 kg)
     public bool EsCompleja()
     {
         int cantidadUnidades = Locomotoras.Count + Vagones.Count;
@@ -112,13 +109,10 @@ public class _Deposito
 
     public bool NecesitaConductorExperimentado()
     {
-        // Revisamos tren por tren en el depósito
         foreach (var formacion in Formaciones)
         {
-            // Le preguntamos a la formación si es compleja usando su propio método
             if (formacion.EsCompleja() == true)
             {
-                // Con que UNA SOLA sea compleja, ya devolvemos true y se corta el ciclo.
                 // ¡Avisamos que llamen al conductor experto!
                 return true; 
             }
