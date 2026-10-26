@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nazareno Siciliano · Portafolio</title>
+<meta name="description" content="Portafolio de Nazareno Siciliano: análisis de datos, tableros y desarrollo web aplicado a salud pública.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--text:#1c1d1f;--muted:#5d6168;--line:#e3e3df;--accent:#0f766e;--accent-soft:#e0f2ef;--tag:#f0f0ec}
+@media (prefers-color-scheme:dark){:root{--bg:#121315;--card:#1b1c1f;--text:#ececea;--muted:#a0a3a9;--line:#2c2e32;--accent:#2dd4bf;--accent-soft:#163a36;--tag:#25272b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:72px 0 40px}
+.kicker{font:500 13px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.04em}
+h1{font-size:clamp(32px,5vw,48px);line-height:1.1;margin:10px 0 14px}
+.lead{max-width:640px;color:var(--muted);font-size:18px;margin:0}
+nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+nav a{padding:8px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;color:var(--text);font-size:14px;background:var(--card)}
+nav a:hover{border-color:var(--accent)}
+section{padding:36px 0}
+h2{font-size:24px;margin:0 0 6px}
+.sub{color:var(--muted);margin:0 0 22px;max-width:720px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags span{font:500 12px "JetBrains Mono",monospace;background:var(--tag);padding:3px 8px;border-radius:6px}
+.links{display:flex;gap:14px;font-size:14px;font-weight:500}
+.priv{font-size:13px;color:var(--muted)}
+.badge{display:inline-block;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:2px 8px;border-radius:6px;width:fit-content}
+.pbi-list{display:flex;flex-direction:column;gap:20px}
+.pbi-shot{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+.pbi{aspect-ratio:16/9.5;width:100%;border:0;border-radius:10px;background:var(--tag)}
+.empty{border:1px dashed var(--line);border-radius:14px;padding:28px;color:var(--muted);text-align:center}
+footer{padding:40px 0 60px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="kicker">ANÁLISIS DE DATOS · DESARROLLO WEB · SALUD PÚBLICA</div>
+  <h1>Nazareno Siciliano</h1>
+  <p class="lead">Convierto datos de salud pública en tableros, análisis y herramientas que los equipos usan todos los días: desde notebooks de ciencia de datos hasta apps web en producción.</p>
+  <nav>
+    <a href="#powerbi">Power BI</a>
+    <a href="#apps">Aplicaciones</a>
+    <a href="#data">Ciencia de datos</a>
+    <a href="#programacion">Programación</a>
+    <a href="https://github.com/NazarenoSiciliano">GitHub ↗</a>
+  </nav>
+</header>
+
+<section id="powerbi">
+  <h2>Tableros de Power BI</h2>
+  <p class="sub">Todos los tableros usan datos anonimizados o de ejemplo, con la misma estructura y tendencias que los originales pero sin información real de personas ni instituciones.</p>
+  <div class="pbi-list" id="pbi-list"></div>
+</section>
+
+<section id="apps">
+  <h2>Aplicaciones</h2>
+  <p class="sub">Herramientas desarrolladas para equipos reales. El código es privado porque trabajan con información sensible; puedo mostrar una demo con datos de ejemplo.</p>
+  <div class="grid">
+    <article class="card">
+      <span class="badge">En producción</span>
+      <h3>Registro de Vacunas</h3>
+      <p>App web para que los implementadores carguen las vacunas y estudios aplicados. Coordinación ve el dashboard, la cobertura y un informe en PDF. Tiene roles, auditoría, importación desde Excel y login con verificación por mail.</p>
+      <div class="tags"><span>Angular</span><span>Node.js</span><span>Apps Script</span><span>TiDB / SQL</span></div>
+      <span class="priv">🔒 Repositorio privado</span>
+    </article>
+    <article class="card">
+      <span class="badge">IA</span>
+      <h3>Asistente de Vacunas</h3>
+      <p>Chat que responde preguntas del equipo usando solo la documentación interna y cita de qué documento y página sale cada respuesta. Usa prompt caching para bajar costos, con límite de consultas y código de acceso.</p>
+      <div class="tags"><span>Claude API</span><span>Node.js</span><span>Express</span></div>
+      <span class="priv">🔒 Repositorio privado</span>
+    </article>
+    <article class="card">
+      <h3>Tablero de Laboratorio – CABA</h3>
+      <p>Tablero en un solo archivo HTML con solicitudes, turnos otorgados y estudios de laboratorio por hospital y comuna, con mapa. Importa CSV o Excel y guarda los datos solo en el navegador, sin datos de pacientes.</p>
+      <div class="tags"><span>JavaScript</span><span>Chart.js</span><span>SheetJS</span><span>IndexedDB</span></div>
+      <span class="priv">🔒 Repositorio privado</span>
+    </article>
+    <article class="card">
+      <h3>Capacitaciones en Terreno</h3>
+      <p>Registro de capacitaciones en efectores de salud, con login, carga por capacitador, objetivos y panel con indicadores.</p>
+      <div class="tags"><span>Vite</span><span>Supabase</span><span>Chart.js</span></div>
+      <span class="priv">🔒 Repositorio privado</span>
+    </article>
+    <article class="card">
+      <h3>Bar Manager Pro</h3>
+      <p>Gestión de un bar: stock de productos, recetas de tragos y un calculador de insumos para eventos. API REST con autenticación JWT.</p>
+      <div class="tags"><span>Node.js</span><span>Express</span><span>MySQL</span><span>JWT</span></div>
+      <span class="priv">🔒 Repositorio privado</span>
+    </article>
+  </div>
+</section>
+
+<section id="data">
+  <h2>Ciencia de datos</h2>
+  <p class="sub">Proyectos de la carrera de Data Science, con datos abiertos.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>Detección de phishing con NLP</h3>
+      <p>Pipeline completo de procesamiento de texto (limpieza, lematización, TF-IDF) y una red neuronal en PyTorch con Batch Normalization, Dropout y early stopping para clasificar mensajes.</p>
+      <div class="tags"><span>PyTorch</span><span>spaCy</span><span>NLTK</span><span>scikit-learn</span></div>
+      <div class="links"><a href="https://github.com/NazarenoSiciliano/DataScience-III">Ver repositorio ↗</a></div>
+    </article>
+    <article class="card">
+      <h3>Vacunación y sarampión en Buenos Aires</h3>
+      <p>Cobertura de la Triple Viral (SRP) en la Provincia de Buenos Aires entre 2009 y 2018 frente al umbral del 95% de la OMS. Analiza las diferencias entre primera y segunda dosis y los años de mayor riesgo de brote.</p>
+      <div class="tags"><span>Python</span><span>Pandas</span><span>Seaborn</span></div>
+      <div class="links"><a href="https://github.com/NazarenoSiciliano/Data-Science-II">Ver repositorio ↗</a></div>
+    </article>
+    <article class="card">
+      <h3>Casos de dengue en CABA (2024–2025)</h3>
+      <p>Evolución semanal del brote, estacionalidad e incidencia por comuna y por grupo de edad, a partir de datos abiertos del Gobierno de la Ciudad.</p>
+      <div class="tags"><span>Python</span><span>Pandas</span><span>Matplotlib</span></div>
+      <div class="links"><a href="https://github.com/NazarenoSiciliano/Data-science-I">Ver repositorio ↗</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="programacion">
+  <h2>Programación</h2>
+  <p class="sub">Ejercicios de programación orientada a objetos en C#.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>Ejercicios en C#</h3>
+      <p>Clases, herencia y modelado de problemas (por ejemplo, un sistema de tren y depósito).</p>
+      <div class="tags"><span>C#</span><span>POO</span></div>
+      <div class="links"><a href="https://github.com/NazarenoSiciliano/Portafolio/tree/main/Programaci%C3%B3n">Ver código ↗</a></div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <a href="https://github.com/NazarenoSiciliano">github.com/NazarenoSiciliano</a>
+</footer>
+</div>
+
+<script>
+// Cómo sumar un tablero (ver README › Power BI):
+//   captura: imagen en powerbi/ (ej. "powerbi/ventas.png")  → siempre se muestra
+//   url:     link de "Publicar en la web" (opcional)          → si está, se muestra interactivo
+//   pbix:    archivo .pbix anonimizado en powerbi/ (opcional) → botón de descarga
+// Usá solo versiones con datos anonimizados: todo lo de acá queda público.
+const TABLEROS = [
+  // { titulo: "Nombre del tablero", descripcion: "Qué pregunta responde y qué muestra.", herramientas: ["Power Query", "DAX"], captura: "powerbi/tablero.png", url: "", pbix: "powerbi/tablero.pbix" },
+];
+
+const lista = document.getElementById("pbi-list");
+if (!TABLEROS.length) {
+  lista.outerHTML = '<div class="empty">Próximamente: tableros con datos anonimizados.</div>';
+}
+for (const t of TABLEROS) {
+  const card = document.createElement("article");
+  card.className = "card";
+  const h3 = card.appendChild(document.createElement("h3"));
+  h3.textContent = t.titulo;
+  const p = card.appendChild(document.createElement("p"));
+  p.textContent = t.descripcion;
+  if (t.url) {
+    const f = card.appendChild(document.createElement("iframe"));
+    Object.assign(f, { className: "pbi", src: t.url, title: t.titulo, loading: "lazy", allowFullscreen: true });
+  } else if (t.captura) {
+    const img = card.appendChild(document.createElement("img"));
+    Object.assign(img, { className: "pbi-shot", src: t.captura, alt: "Captura del tablero " + t.titulo, loading: "lazy" });
+  }
+  const tags = card.appendChild(document.createElement("div"));
+  tags.className = "tags";
+  for (const h of ["Power BI", ...(t.herramientas || [])]) tags.appendChild(document.createElement("span")).textContent = h;
+  if (t.pbix) {
+    const links = card.appendChild(document.createElement("div"));
+    links.className = "links";
+    const a = links.appendChild(document.createElement("a"));
+    Object.assign(a, { href: t.pbix, textContent: "Descargar .pbix ↓" });
+  }
+  lista.append(card);
+}
+</script>
+</body>
+</html>
